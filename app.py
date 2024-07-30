@@ -47,7 +47,7 @@ def read_data(user_id):
         return jsonify(error="User not found"), 404
 
 @app.route('/nickname', methods=['GET'])
-def get_nickname()
+def get_nickname():
     ref = db.reference('nicknames')
     snapshot = ref.get()
 
