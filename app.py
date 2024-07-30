@@ -22,11 +22,11 @@ firebase_admin.initialize_app(cred, {
 
 @app.route('/')
 def home():
-    return flask.redirect('https://api.sebbymortimer.co.uk/docs')
+    return Flask.redirect('https://api.sebbymortimer.co.uk/docs')
 
 @app.route('/docs')
 def show_docs():
-    return flask.render_template('docs/docs.html')
+    return Flask.render_template('docs/docs.html')
 
 @app.route('/write/<user_id>/<name>', methods=['POST'])
 def write_data(user_id, name):
