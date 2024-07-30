@@ -1,6 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, db
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template, redirect
 import os
 import base64
 import json
