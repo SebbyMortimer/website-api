@@ -21,8 +21,12 @@ firebase_admin.initialize_app(cred, {
 })
 
 @app.route('/')
-def hello_world():
-    return jsonify(message="Hello, World!")
+def home():
+    return redirect(https://api.sebbymortimer.co.uk/docs)
+
+@app.route('/docs')
+def show_docs():
+    return flask.render_template('docs/docs.html')
 
 @app.route('/write/<user_id>/<name>', methods=['POST'])
 def write_data(user_id, name):
