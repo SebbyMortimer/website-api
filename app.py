@@ -22,7 +22,7 @@ firebase_admin.initialize_app(cred, {
 
 @app.route('/')
 def home():
-    return redirect(https://api.sebbymortimer.co.uk/docs)
+    return flask.redirect('https://api.sebbymortimer.co.uk/docs')
 
 @app.route('/docs')
 def show_docs():
