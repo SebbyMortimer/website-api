@@ -26,7 +26,7 @@ def home():
 
 @app.route('/docs')
 def show_docs():
-    return render_template('docs/docs.html')
+    return render_template('docs/index.html')
 
 @app.route('/write/<user_id>/<name>', methods=['POST'])
 def write_data(user_id, name):
