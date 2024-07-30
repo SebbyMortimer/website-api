@@ -3,8 +3,31 @@
 <html>
 <head>
     <title>Sebby's API Docs</title>
+    <style>
+        p {font-family: "Trebuchet MS"; margin-left: 8px;}
+        div {border:1px solid black; margin-bottom: 16px;}
+    </style>
 </head>
 <body>
-    <p>Documentation for my future REST apis</p>
+    <h1>Sebby's API Docs</h1>
+    <h2>User database</h2>
+    <h3>Read</h3>
+    <div>
+        <p>
+            https://api.sebbymortimer.co.uk<b>/read/&lt;user_id&gt;</b>
+            <br>
+            e.g. https://api.sebbymortimer.co.uk<b>/read/12345</b>
+        </p>
+        <p>Returns the name of the specified user_id</p>
+    </div>
+    <h3>Write</h3>
+    <div>
+        <p>
+            https://api.sebbymortimer.co.uk<b>/write/&lt;user_id&gt;/&lt;name&gt;</b>
+            <br>
+            e.g. https://api.sebbymortimer.co.uk<b>/write/12345/Sebby</b>
+        </p>
+        <p>Writes the given user_id and name to the database</p>
+    </div>
 </body>
 </html>
