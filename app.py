@@ -4,6 +4,7 @@ from flask import Flask, jsonify, redirect, send_from_directory
 import os
 import base64
 import json
+import random
 
 app = Flask(__name__)
 
@@ -44,6 +45,14 @@ def read_data(user_id):
         return jsonify(username=snapshot['username']), 200
     else:
         return jsonify(error="User not found"), 404
+
+@app.route('/nickname', methods=['GET'])
+def get_nickname()
+    ref = db.reference('nicknames')
+    snapshot = ref.get()
+
+    nickname = random.choice(snapshot)
+    return "<p>" + nickname + "</p>"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=5000)
