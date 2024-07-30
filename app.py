@@ -1,6 +1,6 @@
 import firebase_admin
 from firebase_admin import credentials, db
-from flask import Flask, jsonify, render_template, redirect
+from flask import Flask, jsonify, redirect, send_from_directory
 import os
 import base64
 import json
@@ -26,7 +26,7 @@ def home():
 
 @app.route('/docs')
 def show_docs():
-    return render_template('docs/index.html')
+    return send_from_directory('docs', 'index.html')
 
 @app.route('/write/<user_id>/<name>', methods=['POST'])
 def write_data(user_id, name):
